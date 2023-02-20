@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		A0A3A529299E4DE3004CC98D /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0A3A528299E4DE3004CC98D /* main.swift */; };
+		A0A3A531299E4E28004CC98D /* CommandLineKit in Frameworks */ = {isa = PBXBuildFile; productRef = A0A3A530299E4E28004CC98D /* CommandLineKit */; };
+		A0A3A534299E4E3A004CC98D /* SwiftCSV in Frameworks */ = {isa = PBXBuildFile; productRef = A0A3A533299E4E3A004CC98D /* SwiftCSV */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -32,6 +34,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A0A3A531299E4E28004CC98D /* CommandLineKit in Frameworks */,
+				A0A3A534299E4E3A004CC98D /* SwiftCSV in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -78,6 +82,10 @@
 			dependencies = (
 			);
 			name = AldermoreConverter;
+			packageProductDependencies = (
+				A0A3A530299E4E28004CC98D /* CommandLineKit */,
+				A0A3A533299E4E3A004CC98D /* SwiftCSV */,
+			);
 			productName = AldermoreConverter;
 			productReference = A0A3A525299E4DE3004CC98D /* AldermoreConverter */;
 			productType = "com.apple.product-type.tool";
@@ -106,6 +114,10 @@
 				Base,
 			);
 			mainGroup = A0A3A51C299E4DE3004CC98D;
+			packageReferences = (
+				A0A3A52F299E4E28004CC98D /* XCRemoteSwiftPackageReference "CommandLineKit" */,
+				A0A3A532299E4E3A004CC98D /* XCRemoteSwiftPackageReference "SwiftCSV" */,
+			);
 			productRefGroup = A0A3A526299E4DE3004CC98D /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -284,6 +296,38 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		A0A3A52F299E4E28004CC98D /* XCRemoteSwiftPackageReference "CommandLineKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/IngmarStein/CommandLineKit";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+		A0A3A532299E4E3A004CC98D /* XCRemoteSwiftPackageReference "SwiftCSV" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/swiftcsv/SwiftCSV.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		A0A3A530299E4E28004CC98D /* CommandLineKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A0A3A52F299E4E28004CC98D /* XCRemoteSwiftPackageReference "CommandLineKit" */;
+			productName = CommandLineKit;
+		};
+		A0A3A533299E4E3A004CC98D /* SwiftCSV */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A0A3A532299E4E3A004CC98D /* XCRemoteSwiftPackageReference "SwiftCSV" */;
+			productName = SwiftCSV;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = A0A3A51D299E4DE3004CC98D /* Project object */;
 }
