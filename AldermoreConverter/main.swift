@@ -35,6 +35,9 @@ func convertDate(dateString: String) -> String? {
         let yesterday = Calendar.current.date(byAdding: .day, value: -1, to: Date())!
         return outputFormatter.string(from: yesterday)
     }
+    else if dateString.lowercased() == "today"  {
+        return outputFormatter.string(from: Date())
+    }
     else {
         return nil
     }
